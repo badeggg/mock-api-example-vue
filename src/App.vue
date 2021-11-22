@@ -60,7 +60,7 @@ export default {
       .catch(err => {
         if (err.message.includes('404')) {
           this.fakeStars = 0;
-          this.shouldStartMockErrorTip = 'Failed to request. Do you start mock-api by `npm run serve-mock`?';
+          this.shouldStartMockErrorTip = 'Failed to request. Did you start mock-api by `yarn serve-mock`?';
         }
       })
       .finally(() => {
