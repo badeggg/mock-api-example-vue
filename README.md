@@ -6,20 +6,12 @@ A simple mock-api example, in vue project.
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Start project for development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Start project with mock-api for development
 ```
-yarn build
+yarn serve-mock
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
