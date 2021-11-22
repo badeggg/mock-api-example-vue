@@ -1,10 +1,11 @@
 {
   "name": "mock-api-example-vue",
   "version": "1.0.0",
-  "description": "Example of use @badeggg/mock-api in a common vue project.",
+  "description": "Example of using @badeggg/mock-api in a common vue project.",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve-mock": "mock & vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -19,6 +20,9 @@
   },
   "homepage": "https://github.com/badeggg/mock-api-example-vue#readme",
   "dependencies": {
+    "@badeggg/mock-api": "^1.2.6",
+    "axios": "^0.24.0",
+    "chalk": "^4.1.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },

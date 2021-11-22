@@ -911,6 +911,19 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
+"@badeggg/mock-api@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.npmmirror.com/@badeggg/mock-api/download/@badeggg/mock-api-1.2.6.tgz?cache=0&sync_timestamp=1637576644762&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40badeggg%2Fmock-api%2Fdownload%2F%40badeggg%2Fmock-api-1.2.6.tgz#ae66446447f62a2775b5d4e868a29ecce9907fde"
+  integrity sha512-t6Mtq1+aj+VnWlxljeDEfLAUg4WMW10H2bxLy69TtqbStUeH1pDyIORP/mI0EMTu987SqpNuRxvsYjQE7ZVxDA==
+  dependencies:
+    chalk "^2.4.2"
+    commander "^7.2.0"
+    express "^4.17.0"
+    http-proxy "^1.17.0"
+    lodash "^4.17.14"
+    query-string "^7.0.0"
+    tcp-port-used "^1.0.2"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npmmirror.com/@hapi/address/download/@hapi/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1839,6 +1852,13 @@ aws4@^1.8.0:
   resolved "https://registry.nlark.com/aws4/download/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=
 
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
+
 babel-eslint@^10.1.0:
   version "10.1.0"
   resolved "https://registry.npmmirror.com/babel-eslint/download/babel-eslint-10.1.0.tgz#6968e568a910b78fb3779cdd8b6ac2f479943232"
@@ -2309,7 +2329,7 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.nlark.com/chalk/download/chalk-4.1.2.tgz?cache=0&sync_timestamp=1627646734234&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fchalk%2Fdownload%2Fchalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha1-qsTit3NKdAhnrrFr8CqtVWoeegE=
@@ -2551,6 +2571,11 @@ commander@^2.18.0, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.npmmirror.com/commander/download/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=
+
+commander@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.npmmirror.com/commander/download/commander-7.2.0.tgz?cache=0&sync_timestamp=1634886396986&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcommander%2Fdownload%2Fcommander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
+  integrity sha1-o2y1fQtQHOEI5NIFWaFQo5HZerc=
 
 commander@~2.19.0:
   version "2.19.0"
@@ -2986,6 +3011,13 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
+debug@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.npmmirror.com/debug/download/debug-4.3.1.tgz?cache=0&sync_timestamp=1636300872595&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fdebug%2Fdownload%2Fdebug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
+  dependencies:
+    ms "2.1.2"
+
 debug@^3.1.1, debug@^3.2.6:
   version "3.2.7"
   resolved "https://registry.npmmirror.com/debug/download/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
@@ -3022,7 +3054,7 @@ deep-equal@^1.0.1:
     object-keys "^1.1.1"
     regexp.prototype.flags "^1.2.0"
 
-deep-is@~0.1.3:
+deep-is@^0.1.3, deep-is@~0.1.3:
   version "0.1.4"
   resolved "https://registry.nlark.com/deep-is/download/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha1-pvLc5hL63S7x9Rm3NVHxfoUZmDE=
@@ -3644,7 +3676,7 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-express@^4.16.3, express@^4.17.1:
+express@^4.16.3, express@^4.17.0, express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.nlark.com/express/download/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
   integrity sha1-RJH8OGBc9R+GKdOcK10Cb5ikwTQ=
@@ -3821,6 +3853,11 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+filter-obj@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.nlark.com/filter-obj/download/filter-obj-1.1.0.tgz?cache=0&sync_timestamp=1630003988020&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffilter-obj%2Fdownload%2Ffilter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
+  integrity sha1-mzERErxsYSehbgFsbF1/GeCAXFs=
+
 finalhandler@~1.1.2:
   version "1.1.2"
   resolved "https://registry.nlark.com/finalhandler/download/finalhandler-1.1.2.tgz#b7e7d000ffd11938d0fdb053506f6ebabe9f587d"
@@ -3906,7 +3943,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.14.4:
   version "1.14.5"
   resolved "https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.14.5.tgz?cache=0&sync_timestamp=1635857764332&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
   integrity sha1-8JpYSJgdPHcrU5Iwl3hSP42Fw4E=
@@ -4611,6 +4648,11 @@ ip-regex@^2.1.0:
   resolved "https://registry.nlark.com/ip-regex/download/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
   integrity sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk=
 
+ip-regex@^4.1.0:
+  version "4.3.0"
+  resolved "https://registry.npm.taobao.org/ip-regex/download/ip-regex-4.3.0.tgz?cache=0&sync_timestamp=1611327032630&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fip-regex%2Fdownload%2Fip-regex-4.3.0.tgz#687275ab0f57fa76978ff8f4dddc8a23d5990db5"
+  integrity sha1-aHJ1qw9X+naXj/j03dyKI9WZDbU=
+
 ip@^1.1.0, ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.nlark.com/ip/download/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
@@ -4930,6 +4972,11 @@ is-typedarray@~1.0.0:
   resolved "https://registry.nlark.com/is-typedarray/download/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
 
+is-url@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.nlark.com/is-url/download/is-url-1.2.4.tgz#04a4df46d28c4cff3d73d01ff06abeb318a1aa52"
+  integrity sha1-BKTfRtKMTP89c9Af8Gq+sxihqlI=
+
 is-weakref@^1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/is-weakref/download/is-weakref-1.0.1.tgz#842dba4ec17fa9ac9850df2d6efbc1737274f2a2"
@@ -4953,6 +5000,15 @@ is-wsl@^2.1.1:
   integrity sha1-dKTHbnfKn9P5MvKQwX6jJs0VcnE=
   dependencies:
     is-docker "^2.0.0"
+
+is2@^2.0.6:
+  version "2.0.7"
+  resolved "https://registry.nlark.com/is2/download/is2-2.0.7.tgz#d084e10cab3bd45d6c9dfde7a48599fcbb93fcac"
+  integrity sha1-0IThDKs71F1snf3npIWZ/LuT/Kw=
+  dependencies:
+    deep-is "^0.1.3"
+    ip-regex "^4.1.0"
+    is-url "^1.2.4"
 
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -6700,6 +6756,16 @@ query-string@^4.1.0:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
+query-string@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.nlark.com/query-string/download/query-string-7.0.1.tgz#45bd149cf586aaa582dffc7ec7a8ad97dd02f75d"
+  integrity sha1-Rb0UnPWGqqWC3/x+x6itl90C910=
+  dependencies:
+    decode-uri-component "^0.2.0"
+    filter-obj "^1.1.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.nlark.com/querystring-es3/download/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -7420,6 +7486,11 @@ spdy@^4.0.2:
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
 
+split-on-first@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/split-on-first/download/split-on-first-1.1.0.tgz?cache=0&sync_timestamp=1618467023656&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsplit-on-first%2Fdownload%2Fsplit-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+  integrity sha1-9hCv7uOxK84dDDBCXnY5i3gkml8=
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.nlark.com/split-string/download/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -7520,6 +7591,11 @@ strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.nlark.com/strict-uri-encode/download/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
   integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
+
+strict-uri-encode@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.nlark.com/strict-uri-encode/download/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+  integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
 
 string-width@^3.0.0, string-width@^3.1.0:
   version "3.1.0"
@@ -7678,6 +7754,14 @@ tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.nlark.com/tapable/download/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
   integrity sha1-ofzMBrWNth/XpF2i2kT186Pme6I=
+
+tcp-port-used@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/tcp-port-used/download/tcp-port-used-1.0.2.tgz#9652b7436eb1f4cfae111c79b558a25769f6faea"
+  integrity sha1-llK3Q26x9M+uERx5tViiV2n2+uo=
+  dependencies:
+    debug "4.3.1"
+    is2 "^2.0.6"
 
 terser-webpack-plugin@^1.4.3, terser-webpack-plugin@^1.4.4:
   version "1.4.5"
