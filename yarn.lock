@@ -911,10 +911,10 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@badeggg/mock-api@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.npmmirror.com/@badeggg/mock-api/download/@badeggg/mock-api-1.2.6.tgz?cache=0&sync_timestamp=1637576644762&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40badeggg%2Fmock-api%2Fdownload%2F%40badeggg%2Fmock-api-1.2.6.tgz#ae66446447f62a2775b5d4e868a29ecce9907fde"
-  integrity sha512-t6Mtq1+aj+VnWlxljeDEfLAUg4WMW10H2bxLy69TtqbStUeH1pDyIORP/mI0EMTu987SqpNuRxvsYjQE7ZVxDA==
+"@badeggg/mock-api@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@badeggg/mock-api/-/mock-api-1.4.1.tgz#6c1f975f8361729a41f9c3de6bdf9fbd23da7752"
+  integrity sha512-brW25531B1Ss8umtxYm9Jb+wFZvW08uWhWXrSjvvDodAitTuj/uRk3AaRcAnzKbRZfpuURjtSpLyTrcYisvq6g==
   dependencies:
     chalk "^2.4.2"
     commander "^7.2.0"
@@ -923,6 +923,7 @@
     lodash "^4.17.14"
     query-string "^7.0.0"
     tcp-port-used "^1.0.2"
+    ws "^8.3.0"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -8544,6 +8545,11 @@ ws@^6.0.0, ws@^6.2.1:
   integrity sha1-3Vzb1XqZeZFgl2UtePHMX66gwy4=
   dependencies:
     async-limiter "~1.0.0"
+
+ws@^8.3.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.5.0.tgz#bfb4be96600757fe5382de12c670dab984a1ed4f"
+  integrity sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

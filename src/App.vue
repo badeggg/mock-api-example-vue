@@ -2,26 +2,46 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Example of using @badeggg/mock-api in a common vue project."/>
-    <div>
+    <div class="box">
       <button
         @click="requestFakeServices"
         class="request-button"
       >
-        {{ isLoadingMockApi ? 'making a mock-api request...' : 'make a mock-api request' }}
+        {{ isLoadingMockApi ? 'request a mocked api...' : 'request a mocked api' }}
       </button>
       <span v-if="showMockApiCue" cue> how many stars @badeggg/mock-api has got?</span>
       <p v-if="fakeStars">{{ fakeStars }} ⭐</p>
       <p v-if="shouldStartMockErrorTip" class="error-tip">{{ shouldStartMockErrorTip }}</p>
     </div>
-    <div class="real-api">
+    <div class="box">
       <button
         @click="requestReal"
         class="request-button"
       >
-        {{ isLoadingRealApi ? 'making a real request...' : 'make a real request' }}
+        {{ isLoadingRealApi ? 'request a real api...' : 'request a real api' }}
       </button>
       <span v-if="showRealApiCue" cue> suggest 'hello' phrase:</span>
       <div id="realResponse"></div>
+    </div>
+    <div class="box">
+      <button
+        class="request-button"
+        @click="connectWsFakeServices"
+      >
+        connect a mocked websocket: /ws/echo
+      </button>
+      <input
+        v-if="wsMockOpened"
+        id="wsInput"
+        @keyup.enter="wsMockSend"
+        placeholder="input, press enter to send"
+        style="margin-left: 10px; width: 152px"
+      >
+      <div class="ws-msgs-box">
+        <div v-for="(msg, inx) in wsMockMsgs" :key="msg+inx">
+          <span>{{ msg }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +52,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  ws: null,
   data: () => {
     return {
       fakeStars: 0,
@@ -40,6 +61,9 @@ export default {
       isLoadingRealApi: false,
       isLoadingMockApi: false,
       shouldStartMockErrorTip: '',
+
+      wsMockOpened: false,
+      wsMockMsgs: [],
     };
   },
   components: {
@@ -79,6 +103,19 @@ export default {
         this.isLoadingRealApi = false;
       });
     },
+    connectWsFakeServices() {
+      if (this.wsMockOpened)
+        return;
+      this.ws = new WebSocket('ws:/localhost:8080/ws/echo');
+      this.ws.onopen = () => this.wsMockOpened = true;
+      this.ws.onmessage = (ev) => this.wsMockMsgs.push('<< ' + ev.data);
+    },
+    wsMockSend(ev) {
+      const msg = ev.target.value;
+      this.ws.send(msg);
+      this.wsMockMsgs.push('>> ' + msg);
+      ev.target.value = '';
+    },
   },
 }
 </script>
@@ -93,9 +130,16 @@ export default {
   margin-top: 60px;
 }
 
-.real-api {
-  width: 400px;
+.box {
   margin: 20px auto;
+}
+.box:hover {
+  background: #d5cdcd2e;
+}
+.ws-msgs-box {
+  width: 400px;
+  text-align: left;
+  margin: 10px auto;
 }
 
 ul {
@@ -103,6 +147,7 @@ ul {
 }
 .request-button {
   padding: 8px;
+  cursor: pointer;
 }
 .error-tip {
   color: red;
